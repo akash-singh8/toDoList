@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo's List</title>
+    <link rel="stylesheet" href="todolist.css">
+    <link rel="shortcut icon" href="todolist.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="heading">ToDo List</div>
+            <ul class="items">
+                <li><a href="#">Home</a></li>
+                <li><a href="coding.html">About</a></li>
+                <li><a href="clock.html">Clock</a></li>
+            </ul>
+            <div class="welcome">
+                Hey, <span id="userName" title="User Name"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <form>
+            <label><div class="head boxtop">Add a task</div>
+                <input type="text" name="task" id="task" placeholder="Add a task to your todo's list">
+            </label>
+            <label><div class="head">Add Description</div>
+                <textarea name="descr" id="description" placeholder="Add description to your task"></textarea>
+            </label><br>
+            <input type="submit" value="Add task" id="addTask" class="btn">
+            <input type="reset" value="Clear Box" class="btn">
+            <div id="alltasks"></form>
+                <div class="head tasklist">Today's task</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="fst">SNo</th>
+                            <th class="mid">Task</th>
+                            <th class="lst">Description</th>
+                            <th class="space">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableData">
+                    </tbody>
+                </table>
+            </div>
+            <span id="player"><img id="playSong" src="songIcon.svg" onclick="song.play()" title="Relax with song"></span>
+        </section>
+    </main>
+    <script src="todolist.js"></script>
+</body>
+</html>

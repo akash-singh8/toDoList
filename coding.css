@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .svgimg{
+    margin-top: 2rem;
+    text-align: center;
+    width: 100vw;
+  }
+  
+  .svg{
+    width: 100vw;
+  }
+  #Head{
+    animation: guyhead 1s ease-in-out infinite alternate;
+  }
+  
+  #right-hand{
+    animation: guyhead 0.5s ease-in-out infinite alternate;
+  }
+  @keyframes guyhead {
+    from{
+      transform: translate(0);
+    }
+    to{
+      transform: translateX(1px) translateY(3px);
+    }
+  }
+  #left-hand{
+    transform: translateY(-10px);
+    animation: lefthand 0.6s ease-in-out infinite alternate;
+  }
+  @keyframes lefthand{
+    from{
+      transform: translate(0);
+    }
+    to{
+      transform: translateX(1px) translateY(2px);
+    }
+  }
+  
+  #left-leaf, #Vapour{
+    transform-origin: 0;
+    transform-box: fill-box;
+    animation: leftleaf 1s infinite alternate;
+  }
+  @keyframes leftleaf {
+    from{
+      transform: translate(0);
+    }
+    to{
+      transform: translateX(1px) translateY(2px) rotateX(15deg);
+    }
+  }
+  
+  #right-leaf{
+    animation: leftleaf 1.2s infinite alternate;
+  }
+  @keyframes leftleaf {
+    from{
+      transform: translate(0);
+    }
+    to{
+      transform: translateX(2px) translateY(1px);
+    }
+  }
+  
+  #laptop{
+    animation: laptop 2s alternate infinite;
+  }
+  
+  @keyframes laptop{
+    from{
+      transform: translate(0);
+    }
+    to{
+      transform: translateY(2px) rotateY(5deg);
+    }
+  }
+
+h2{
+  text-align: center;
+  font-family: sans-serif;
+}
+.btn{
+  text-align: center;
+  padding: 8px 16px;
+  width: 100vw;
+}
+
+.btn button{
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid cornflowerblue;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn button:hover{
+  transition: transform 0.4s ease-in-out;
+  background: cornflowerblue;
+  transform: scale(1.08);
+}
+
+a{
+  text-decoration: none;
+  color: rgb(48, 46, 46);
+}

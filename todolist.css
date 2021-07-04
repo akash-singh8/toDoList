@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&family=Ubuntu&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(9deg, rgba(73, 236, 201, 0.8), rgba(59,195,239,1), rgb(209, 129, 255));
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.4rem;
+    color: black;
+}
+.heading{
+    margin-left: 1rem;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.items{
+    list-style-type: none;
+    display: flex;
+    width: 16rem;
+    justify-content: space-between;
+    font-size: 17.5px;
+}
+
+.items li a{
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+}
+.items li:hover{
+    transition: all 0.25s ease;
+    transform: scale(1.04);
+    color: rgb(16, 16, 17);
+}
+
+.welcome{
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-right: 1rem;
+}
+.welcome span{
+    font-weight: bold;
+}
+
+#userName:hover{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+section{
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 80vw;
+    padding: 1rem 1.5rem 2.5rem 1.5rem;
+    border-radius: 0.8rem;
+    border: 4px solid rgba(212, 212, 212, 0.1);
+    background: linear-gradient(9deg, rgba(255, 233, 135, 0.2) 0%, rgba(82, 255, 206, 0.3) 35%, rgba(211, 255, 187, 0.3) 100%);
+    backdrop-filter: blur(4rem);
+    position: relative
+}
+
+#task{
+    margin: 0.1rem 0 1.45rem 0.8rem;
+    width:80%;
+    height: 2rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.9px;
+}
+
+#description{
+    width: 65%;
+    margin: 0.1rem 0 1.8rem 0.8rem;
+    padding: 5px 12px;
+    border-radius: 8px;
+    border: none;
+    height: 3.8rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.head{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(48, 46, 46);
+    letter-spacing: 0.8px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 1.35em;
+}
+
+
+.btn{
+    padding: 4px 8px;
+    border: none;
+    border-radius: 8px;
+    margin: 0.2rem 0.4rem;
+    color: rgb(85, 85, 85);
+    font-size: 0.88em;
+    font-family: 'Hind Siliguri', sans-serif;
+    letter-spacing: 0.8px;
+}
+
+.btn:hover, .icon:hover{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.045);
+    color: black;
+}
+
+.tasklist{
+    margin: 1.2rem 0 0 0.2rem;
+    font-size: 1.65em;
+    display: inline-block;
+    border-bottom: 3px solid cornflowerblue;
+    border-radius: 2px;
+}
+
+hr{
+    margin-left: 1rem;
+    width: 98.5%;
+    border: 0.1px solid rgba(96, 99, 96, 0.76);
+    border-radius: 1rem;
+}
+
+table{
+    margin-top: 1rem;
+    width: 100%;
+}
+
+table tr{
+    display: flex;
+    justify-content: space-between;
+}
+thead tr{
+    height: 2rem;
+    font-size: 1.1em;
+}
+.fst, .mid, .lst{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.8rem;
+    font-family: "Ubuntu", sans-serif;
+}
+.fst{
+    text-align: center;
+    width: 2.8rem;
+    font-weight: bold;
+}
+
+.mid{
+    width: 45%;
+    text-align: center;
+}
+.empty{
+    align-items: center;
+    justify-content: center;
+    border: 0.4px solid rgb(126, 126, 126);
+    border-radius: 1rem;
+}
+.lst{
+    width: calc(100% - 47.8% - 2.8rem);
+    text-align: center;
+}
+.space{
+    width: 5.6%;
+}
+.icon{
+    width: 2.8%;
+    text-align: center;
+    padding: 0 2px;
+}
+
+#playSong{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3em;
+    cursor: pointer;
+}
+
+.songAnimation{
+    animation: rotater 2s ease infinite alternate;
+}
+
+@keyframes rotater {
+    0%{
+        transform: scale(1) 0;
+    }
+    100%{
+        transform: scale(1.1) rotateZ(720deg);
+    }
+}
+
+@media all and (max-width:610px) {
+    section{
+        width: 90vw;
+    }
+    .items{
+        width: 13rem;
+    }
+    #task{
+        width: 90%;
+    }
+    #description{
+        width: 80%;
+    }
+    .icon{
+        width: 5%;
+        text-align: center;
+    }
+}
+
+
+@media all and (max-width:510px) {
+    section{
+        margin-top: 1rem;
+        width: 95vw;
+        padding: 1rem;
+    }
+    .heading{
+        display: none;
+    }
+    .items{
+        margin-left: 1rem;
+        width: 12rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    #task{
+        margin-left: 0;
+        width: 94%;
+    }
+    #description{
+        margin-left: 0;
+        width: 90%;
+    }
+    .icon{
+        width: 6%;
+        text-align: center;
+    }
+}
+
+@media all and (max-width:350px) {
+    .navbar{
+        margin-top: 0.2rem;
+    }
+    section{
+        margin-top: 1,2rem;
+        width: 95vw;
+        padding: 0.5rem;
+    }
+    .boxtop{
+        margin-top: 1rem;
+    }
+    #playSong{
+        width: 2.5em;
+    }
+    .heading{
+        display: none;
+    }
+    .items{
+        margin-left: 0.5rem;
+        width: 10.5rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .welcome{
+        margin-right: 0.5rem;
+    }
+    #task{
+        margin-left: 0;
+        width: 94%;
+    }
+    #description{
+        margin-left: 0;
+        width: 90%;
+    }
+    .fst{
+        display: none;
+    }
+    .mid{
+        width: 50%;
+        padding-bottom: 0.5rem;
+    }
+    .lst{
+        width: 40%;
+        text-align: center;
+    }
+    .icon{
+        width: 10%;
+        text-align: center;
+    }
+    .empty{
+        border-radius: 4px;
+        padding: 2px 4px;
+        width: 80%;
+    }
+} 
