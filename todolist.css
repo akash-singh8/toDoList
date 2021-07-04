@@ -307,7 +307,7 @@ thead tr{
         text-align: center;
     }
     .empty{
-        border-radius: 4px;
+        border: 0;
         padding: 2px 4px;
         width: 100%;
     }
