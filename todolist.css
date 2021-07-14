@@ -10,7 +10,7 @@
 
 body{
     background: linear-gradient(9deg, rgba(73, 236, 201, 0.8), rgba(59,195,239,1), rgb(209, 129, 255));
-    height: 100vh;
+    min-height: 100vh;
 }
 body::-webkit-scrollbar{
             width: 0.4rem;
